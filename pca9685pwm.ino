@@ -58,10 +58,11 @@ void setup() {
 
 
 void loop() {
-  for (float t = 0; t < 6.28; t += 0.002) {  // Loop through a sine wave cycle
-    int red   = (sin(t) * 2047) + 2048;
-    int green = (sin(t + 2.09) * 2047) + 2048;
-    int blue  = (sin(t + 4.18) * 2047) + 2048;
+  for (float t = 0; t < 6.28; t += 0.002) {  
+
+    int red   = (sin(t) * 2047) + 2048;          
+    int green = (sin(t + 4.18) * 2047) + 2048;   
+    int blue  = (sin(t + 2.09) * 2047) + 2048; 
 
     pwm.setPWM(0,  red, 0);
     pwm.setPWM(1,  green, 0);
